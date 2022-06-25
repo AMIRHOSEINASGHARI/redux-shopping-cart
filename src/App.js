@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes , Navigate } from 'react-router-dom';
 import Cart from './components/cart/Cart';
 import Home from './components/home/Home';
 import Navbar from './components/navbar/Navbar';
@@ -15,6 +15,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/productdetail/:id' element={<ProductDetails />} />
         <Route path='/cart' element={<Cart />} />
+        <Route path='/*' element={<Navigate to='/' />} />
       </Routes>
     </Provider>
   );
