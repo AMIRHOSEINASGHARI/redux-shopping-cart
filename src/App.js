@@ -2,6 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/home/Home';
+import ProductDetails from './components/product details/ProductDetails';
 import store from './redux/store';
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
     <Provider store={store}>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/productdetail/:id' element={<ProductDetails />} />
       </Routes>
     </Provider>
   );
