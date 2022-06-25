@@ -4,16 +4,19 @@ import {Link} from 'react-router-dom';
 import CartProduct from './CartProduct';
 import { useDispatch , useSelector } from 'react-redux';
 
+//styles
+import styles from './Cart.module.css';
+
 const Cart = () => {
     const dispatch = useDispatch();
     const cartState = useSelector(state => state.cartState)
 
     return (
-        <div>
-            <div>
+        <div className={styles.cartContainer}>
+            <div className={styles.topSection}>
                 {
                     cartState.itemsCounter >0 &&
-                    <div>
+                    <div className={styles.cartPayments}>
                         <div>
                             <p><span>Total items:</span> {cartState.itemsCounter}</p>
                             <p><span>Total payments:</span> {cartState.totalPrice} $</p>
@@ -41,7 +44,7 @@ const Cart = () => {
                     </div>
                 }
             </div>
-            <div>
+            <div className={styles.shopCartProduct}>
                 {
                     cartState.selectedItems.map(item => <CartProduct key={item.id} data={item} />)
                 }
