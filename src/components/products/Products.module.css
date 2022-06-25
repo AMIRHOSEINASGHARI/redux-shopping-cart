@@ -1,0 +1,76 @@
+.productContainer {
+    background-color: rgb(240, 240, 240);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.productContainer img {
+    width: 150px;
+    height: 150px;
+}
+
+.productContainer h1 {
+    font-size: 16px;
+}
+
+.productContainer a {
+    text-decoration: none;
+    color: black;
+    padding: 0.2rem 0.8rem;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: all 0.2s ease;
+}
+
+.productContainer a:hover {
+    background-color: rgb(223, 222, 222);
+    transition: all 0.2s ease;
+}
+
+.productContainer div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.productContainer button {
+    background-color: blueviolet;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.productContainer button:hover {
+    background-color: rgb(115, 26, 198);
+    transition: all 0.2s ease;
+}
+
+.trashCan img {
+    width: 15px;
+    height: 15px;
+}
+
+.qCounterZero {
+    display: none;
+}
+.qCounterNoneZero {
+    background-color: blueviolet;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    color: #fff;
+}

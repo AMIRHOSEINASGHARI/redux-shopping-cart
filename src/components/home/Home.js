@@ -8,6 +8,9 @@ import Products from '../products/Products';
 //tools
 import spinGif from '../../tools/Spin-gif.gif';
 
+//styles
+import styles from './Home.module.css';
+
 const Home = () => {
 
     const dispatch = useDispatch();
@@ -18,10 +21,10 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
+        <div className={styles.mainContainer}>
             {
                 !productsState.products.length ?
-                <div><img src={spinGif} alt='Loading ...' /></div> :
+                <div className={styles.image}><img src={spinGif} alt='Loading ...' /></div> :
                 productsState.products.map(product => <Products key={product.id} productData={product} />)
             }
         </div>
